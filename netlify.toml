@@ -2,6 +2,9 @@
 # Primary public domain planned for production:
 # https://fragebogen.ki-sicherheit.jetzt
 
+[build]
+  publish = "public"
+
 # Optional legacy redirect:
 # This only works if the old domain is still assigned to the same Netlify site
 # and its DNS still points to Netlify.
