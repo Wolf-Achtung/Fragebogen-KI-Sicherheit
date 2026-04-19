@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Office-KI mit Microsoft Copilot</title>
+  <link rel="stylesheet" href="/assets/forms.css">
+</head>
+<body>
+<header>
+  <div class="hero">
+    <div class="eyebrow">Teilprojekt Office · Microsoft 365</div>
+    <h1>Office-KI mit Microsoft Copilot</h1>
+    <p class="lead">Kurzer Orientierungsfragebogen für Office, Outlook, Teams, Meetings, Textarbeit und Organisation. Ziel ist eine schnelle Einschätzung: sinnvoller Start, Pilotgruppe, offene Punkte und nächste Schritte.</p>
+    <nav class="nav" aria-label="Formularnavigation">
+      <a href="/">← Zur Projektübersicht</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<form name="copilot-integration-v1" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/danke/" id="copilotForm" data-questionnaire="true" data-form-type="copilot">
+  <p hidden><label>Nicht ausfüllen: <input name="bot-field"></label></p>
+  <input type="hidden" name="form-name" value="copilot-integration-v1">
+  <input type="hidden" name="form_version" value="copilot-integration-v2-autosave-notes">
+  <input type="hidden" name="subject" data-remove-prefix value="Office-KI Copilot %{submissionId}">
+  <input type="hidden" name="auto_route">
+  <input type="hidden" name="auto_readiness">
+  <input type="hidden" name="auto_governance">
+  <input type="hidden" name="auto_data_foundation">
+  <input type="hidden" name="auto_adoption">
+  <textarea name="auto_to_clarify" hidden></textarea>
+  <textarea name="auto_unknowns" hidden></textarea>
+  <textarea name="auto_next_steps" hidden></textarea>
+  <textarea name="individual_notes" hidden></textarea>
+  <textarea name="chatgpt_summary" hidden></textarea>
+
+  <div class="draft-bar" aria-live="polite">
+    <div>
+      <strong>Zwischenstand</strong>
+      <span data-draft-status>Automatisches Speichern ist aktiv. Der Entwurf bleibt in diesem Browser erhalten.</span>
+    </div>
+    <button type="button" class="secondary small-button" data-clear-draft>Zwischenstand löschen</button>
+  </div>
+
+  <div class="assessment" aria-live="polite"></div>
+
+  <details open>
+    <summary>Teil A – Was soll Office-KI zuerst verbessern?</summary>
+    <div class="details-body">
+      <p class="section-hint">Dieser Teil reicht bereits für eine erste Empfehlung: welcher Start sinnvoll ist, wer testen sollte und was vorher kurz geklärt werden muss.</p>
+<fieldset>
+        <legend>Welcher Einstieg fühlt sich für die nächsten 3–6 Monate passend an? <span class="required-note">für Roadmap</span></legend>
+        <div class="option-grid">
+          <label class="option"><input required type="radio" name="target_mode" value="Sicherer KI-Chat als Einstieg"> Sicherer KI-Chat als Einstieg</label>
+          <label class="option"><input type="radio" name="target_mode" value="Microsoft 365 Copilot integriert"> Microsoft 365 Copilot integriert in Word, Outlook, Teams, PowerPoint, Excel</label>
+          <label class="option"><input type="radio" name="target_mode" value="Gestuft: erst Chat, dann Integration"> Gestuft: erst Chat, dann Integration</label>
+          <label class="option"><input type="radio" name="target_mode" value="Noch offen"> Noch offen</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Für welche Bereiche soll Office-KI zuerst hilfreich werden? <span class="required-note">für Roadmap</span></legend>
+        <div class="option-grid">
+          <label class="option"><input type="checkbox" name="pilot_groups" value="PM / Projektmanagement"> PM / Projektmanagement</label>
+          <label class="option"><input type="checkbox" name="pilot_groups" value="Text / Kreation"> Text / Kreation</label>
+          <label class="option"><input type="checkbox" name="pilot_groups" value="Geschäftsführung"> Geschäftsführung</label>
+          <label class="option"><input type="checkbox" name="pilot_groups" value="Vertrieb / Kundenkommunikation"> Vertrieb / Kundenkommunikation</label>
+          <label class="option"><input type="checkbox" name="pilot_groups" value="Produktion / Disposition"> Produktion / Disposition</label>
+          <label class="option"><input type="checkbox" name="pilot_groups" value="HR / Finance"> HR / Finance</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Wie viele Personen sollen im Pilot starten? <span class="required-note">für Roadmap</span></legend>
+        <div class="option-grid">
+          <label class="option"><input required type="radio" name="pilot_size" value="1–3"> 1–3</label>
+          <label class="option"><input type="radio" name="pilot_size" value="4–10"> 4–10</label>
+          <label class="option"><input type="radio" name="pilot_size" value="11–25"> 11–25</label>
+          <label class="option"><input type="radio" name="pilot_size" value="Mehr als 25"> Mehr als 25</label>
+          <label class="option"><input type="radio" name="pilot_size" value="Noch offen"> Noch offen</label>
+        </div>
+      </fieldset>
+
+      <label class="field-label" for="full_size">Wie viele Personen wären perspektivisch im Vollausbau relevant?</label>
+      <input id="full_size" name="full_size" type="text" placeholder="z. B. 15–20 Personen">
+
+      <label class="field-label" for="success_90_days">Was wären drei erfreuliche Ergebnisse nach 90 Tagen? <span class="required-note">für Roadmap</span></label>
+      <p class="help">Beispiele: schnellere Meeting-Zusammenfassungen, bessere E-Mail-Entwürfe, weniger Suchaufwand, schnellere Briefings.</p>
+      <textarea id="success_90_days" name="success_90_days" required></textarea>
+
+      <fieldset>
+        <legend>Welche Microsoft-365-Basislizenz nutzt die Pilotgruppe überwiegend? <span class="required-note">für Roadmap</span></legend>
+        <div class="option-grid">
+          <label class="option"><input required type="radio" name="license_family" value="Business Basic"> Business Basic</label>
+          <label class="option"><input type="radio" name="license_family" value="Business Standard"> Business Standard</label>
+          <label class="option"><input type="radio" name="license_family" value="Business Premium"> Business Premium</label>
+          <label class="option"><input type="radio" name="license_family" value="E3"> E3</label>
+          <label class="option"><input type="radio" name="license_family" value="E5"> E5</label>
+          <label class="option"><input type="radio" name="license_family" value="Gemischt / unbekannt"> Gemischt / unbekannt</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Melden sich die Nutzer zentral über Microsoft an? <span class="required-note">für Roadmap</span></legend>
+        <p class="help">Technisch: Microsoft Entra ID / Azure AD.</p>
+        <div class="option-grid">
+          <label class="option"><input required type="radio" name="entra_id" value="Ja"> Ja</label>
+          <label class="option"><input type="radio" name="entra_id" value="Teilweise"> Teilweise</label>
+          <label class="option"><input type="radio" name="entra_id" value="Nein"> Nein</label>
+          <label class="option"><input type="radio" name="entra_id" value="Unbekannt"> Unbekannt</label>
+        </div>
+      </fieldset>
+
+      <p id="integrationRequirementHint" class="notice hidden">Diese beiden Fragen helfen besonders, wenn integrierter Microsoft 365 Copilot oder ein gestufter Start geplant ist.</p>
+
+      <fieldset>
+        <legend>Liegen die primären Postfächer der Pilotgruppe in Exchange Online?</legend>
+        <div class="option-grid">
+          <label class="option"><input type="radio" name="exchange_online" value="Ja"> Ja</label>
+          <label class="option"><input type="radio" name="exchange_online" value="Teilweise"> Teilweise</label>
+          <label class="option"><input type="radio" name="exchange_online" value="Nein"> Nein</label>
+          <label class="option"><input type="radio" name="exchange_online" value="Unbekannt"> Unbekannt</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sind Microsoft-365-Apps aktuell auf den Pilot-Rechnern installiert?</legend>
+        <div class="option-grid">
+          <label class="option"><input type="radio" name="m365_apps" value="Ja, aktuell"> Ja, aktuell</label>
+          <label class="option"><input type="radio" name="m365_apps" value="Teilweise"> Teilweise</label>
+          <label class="option"><input type="radio" name="m365_apps" value="Nein"> Nein</label>
+          <label class="option"><input type="radio" name="m365_apps" value="Unbekannt"> Unbekannt</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Wird Teams für Meetings genutzt?</legend>
+        <div class="option-grid">
+          <label class="option"><input type="radio" name="teams_usage" value="Ja, regelmäßig"> Ja, regelmäßig</label>
+          <label class="option"><input type="radio" name="teams_usage" value="Ja, gelegentlich"> Ja, gelegentlich</label>
+          <label class="option"><input type="radio" name="teams_usage" value="Nein"> Nein</label>
+          <label class="option"><input type="radio" name="teams_usage" value="Unbekannt"> Unbekannt</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Ist Meeting-Transkription oder Aufzeichnung erlaubt/aktivierbar?</legend>
+        <div class="option-grid">
+          <label class="option"><input type="radio" name="meeting_transcription" value="Ja"> Ja</label>
+          <label class="option"><input type="radio" name="meeting_transcription" value="Teilweise"> Teilweise</label>
+          <label class="option"><input type="radio" name="meeting_transcription" value="Nein"> Nein</label>
+          <label class="option"><input type="radio" name="meeting_transcription" value="Unbekannt"> Unbekannt</label>
+        </div>
+      </fieldset>
+    </div>
+  </details>
+
+  <details>
+    <summary>Teil B – Daten & gemeinsame Spielregeln</summary>
+    <div class="details-body">
+      <p class="section-hint">Dieser Teil hilft einzuschätzen, wo die wichtigsten Informationen liegen und welche Inhalte besonders behutsam behandelt werden sollten.</p>
+
+      <fieldset>
+        <legend>Wo liegen die wichtigsten Arbeitsdaten heute? <span class="required-note">für Roadmap</span></legend>
+        <div class="option-grid">
+          <label class="option"><input type="checkbox" name="data_locations" value="Outlook"> Outlook</label>
+          <label class="option"><input type="checkbox" name="data_locations" value="Teams"> Teams</label>
+          <label class="option"><input type="checkbox" name="data_locations" value="SharePoint"> SharePoint</label>
+          <label class="option"><input type="checkbox" name="data_locations" value="OneDrive"> OneDrive</label>
+          <label class="option"><input type="checkbox" name="data_locations" value="Lokaler Fileserver"> Lokaler Fileserver</label>
+          <label class="option"><input type="checkbox" name="data_locations" value="Dropbox / Google Drive / andere Cloud"> Dropbox / Google Drive / andere Cloud</label>
+          <label class="option"><input type="checkbox" name="data_locations" value="Avid-/Produktionsspeicher"> Avid-/Produktionsspeicher</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Welche Daten soll Copilot grundsätzlich nutzen dürfen?</legend>
+        <div class="option-grid">
+          <label class="option"><input type="checkbox" name="allowed_data" value="E-Mails"> E-Mails</label>
+          <label class="option"><input type="checkbox" name="allowed_data" value="Kalender"> Kalender</label>
+          <label class="option"><input type="checkbox" name="allowed_data" value="Teams-Chats"> Teams-Chats</label>
+          <label class="option"><input type="checkbox" name="allowed_data" value="Meeting-Transkripte"> Meeting-Transkripte</label>
+          <label class="option"><input type="checkbox" name="allowed_data" value="SharePoint-Dokumente"> SharePoint-Dokumente</label>
+          <label class="option"><input type="checkbox" name="allowed_data" value="OneDrive-Dokumente"> OneDrive-Dokumente</label>
+          <label class="option"><input type="checkbox" name="allowed_data" value="Präsentationen"> Präsentationen</label>
+          <label class="option"><input type="checkbox" name="allowed_data" value="Angebots-/Pitchunterlagen"> Angebots-/Pitchunterlagen</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Welche Inhalte sollen besonders behutsam behandelt oder ausgeschlossen werden? <span class="required-note">für Roadmap</span></legend>
+        <div class="option-grid">
+          <label class="option"><input type="checkbox" name="sensitive_content" value="Kundenverträge"> Kundenverträge</label>
+          <label class="option"><input type="checkbox" name="sensitive_content" value="Unveröffentlichte Filmtitel"> Unveröffentlichte Filmtitel</label>
+          <label class="option"><input type="checkbox" name="sensitive_content" value="Drehbücher / Treatments"> Drehbücher / Treatments</label>
+          <label class="option"><input type="checkbox" name="sensitive_content" value="Finanzdaten"> Finanzdaten</label>
+          <label class="option"><input type="checkbox" name="sensitive_content" value="HR-Daten"> HR-Daten</label>
+          <label class="option"><input type="checkbox" name="sensitive_content" value="Vertrauliche Pitches"> Vertrauliche Pitches</label>
+          <label class="option"><input type="checkbox" name="sensitive_content" value="Kundendaten mit NDA"> Kundendaten mit NDA</label>
+          <label class="option"><input type="checkbox" name="sensitive_content" value="Personenbezogene Daten"> Personenbezogene Daten</label>
+          <label class="option"><input type="checkbox" name="sensitive_content" value="Keine besonders schützenswerten Inhalte im Pilot"> Keine besonders schützenswerten Inhalte im Pilot</label>
+          <label class="option"><input type="checkbox" name="sensitive_content" value="Unklar"> Unklar</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Wie verbreitet sind externe Freigaben heute?</legend>
+        <div class="option-grid">
+          <label class="option"><input type="radio" name="external_sharing" value="Kaum"> Kaum</label>
+          <label class="option"><input type="radio" name="external_sharing" value="Punktuell"> Punktuell</label>
+          <label class="option"><input type="radio" name="external_sharing" value="Häufig"> Häufig</label>
+          <label class="option"><input type="radio" name="external_sharing" value="Unklar"> Unklar</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Gibt es Vertraulichkeitskennzeichnungen?</legend>
+        <p class="help">Technisch: Sensitivity Labels.</p>
+        <div class="option-grid">
+          <label class="option"><input type="radio" name="sensitivity_labels" value="Ja, flächig"> Ja, flächig</label>
+          <label class="option"><input type="radio" name="sensitivity_labels" value="Punktuell"> Punktuell</label>
+          <label class="option"><input type="radio" name="sensitivity_labels" value="Geplant"> Geplant</label>
+          <label class="option"><input type="radio" name="sensitivity_labels" value="Nein / unbekannt"> Nein / unbekannt</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Gibt es schon Regeln gegen versehentliches Teilen sensibler Inhalte?</legend>
+        <p class="help">Technisch: DLP / Data Loss Prevention.</p>
+        <div class="option-grid">
+          <label class="option"><input type="radio" name="dlp" value="Ja"> Ja</label>
+          <label class="option"><input type="radio" name="dlp" value="Teilweise"> Teilweise</label>
+          <label class="option"><input type="radio" name="dlp" value="Nein"> Nein</label>
+          <label class="option"><input type="radio" name="dlp" value="Unbekannt"> Unbekannt</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sind MFA und zusätzliche Zugriffsregeln aktiv?</legend>
+        <p class="help">Technisch: Multi-Faktor-Anmeldung / Conditional Access.</p>
+        <div class="option-grid">
+          <label class="option"><input type="radio" name="mfa_ca" value="Ja"> Ja</label>
+          <label class="option"><input type="radio" name="mfa_ca" value="Teilweise"> Teilweise</label>
+          <label class="option"><input type="radio" name="mfa_ca" value="Nein"> Nein</label>
+          <label class="option"><input type="radio" name="mfa_ca" value="Unbekannt"> Unbekannt</label>
+        </div>
+      </fieldset>
+
+      <label class="field-label" for="compliance_notes">Gibt es Kunden- oder Compliance-Vorgaben, die Copilot einschränken?</label>
+      <textarea id="compliance_notes" name="compliance_notes" placeholder="Kurz beschreiben, falls relevant."></textarea>
+
+      <label class="field-label" for="local_offline_notes">Gibt es Aufgaben oder Inhalte, die bewusst nicht in eine Cloud-KI sollen?</label>
+      <p class="help">Optional. Hilft bei der Abgrenzung zwischen Office-KI und lokaler KI, zum Beispiel bei Inhalten, die lokal oder offline bleiben sollen.</p>
+      <textarea id="local_offline_notes" name="local_offline_notes" placeholder="z. B. lokale Wissensdatenbank, Produktionsmaterial, bestimmte Projektarten."></textarea>
+    </div>
+  </details>
+
+  <details>
+    <summary>Teil C – Pilot, Lernen & Alltag</summary>
+    <div class="details-body">
+      <p class="section-hint">Dieser Teil klärt, wer mitmacht, wer hilft und woran der Pilot später gemessen wird.</p>
+
+      <label class="field-label" for="executive_sponsor">Wer unterstützt den Pilot auf Entscheiderseite? <span class="required-note">für Roadmap</span></label>
+      <input id="executive_sponsor" name="executive_sponsor" type="text" required placeholder="Name oder Rolle">
+
+      <label class="field-label" for="it_owner">Wer kann technische Fragen klären? <span class="required-note">für Roadmap</span></label>
+      <input id="it_owner" name="it_owner" type="text" required placeholder="Name oder Rolle">
+
+      <label class="field-label" for="champions">Wer wären 1–3 gute Testpersonen oder Key User?</label>
+      <input id="champions" name="champions" type="text" placeholder="Namen oder Rollen">
+
+      <fieldset>
+        <legend>Wie soll geschult werden?</legend>
+        <div class="option-grid">
+          <label class="option"><input type="checkbox" name="training_formats" value="60-Minuten-Einführung"> 60-Minuten-Einführung</label>
+          <label class="option"><input type="checkbox" name="training_formats" value="Hands-on-Workshop"> Hands-on-Workshop</label>
+          <label class="option"><input type="checkbox" name="training_formats" value="Prompt-Beispiele"> Prompt-Beispiele</label>
+          <label class="option"><input type="checkbox" name="training_formats" value="Sprechstunde"> Sprechstunde</label>
+          <label class="option"><input type="checkbox" name="training_formats" value="Teams-Community"> Teams-Community</label>
+          <label class="option"><input type="checkbox" name="training_formats" value="Video-/PDF-Kurzanleitung"> Video-/PDF-Kurzanleitung</label>
+        </div>
+      </fieldset>
+
+      <label class="field-label" for="support_owner">Wer hilft bei Fragen im Alltag?</label>
+      <input id="support_owner" name="support_owner" type="text" placeholder="IT, externer Partner, Key User, Fachbereich ...">
+
+      <fieldset>
+        <legend>Woran merkt man, dass der Pilot geholfen hat?</legend>
+        <div class="option-grid">
+          <label class="option"><input type="checkbox" name="success_metrics" value="Zeitersparnis"> Zeitersparnis</label>
+          <label class="option"><input type="checkbox" name="success_metrics" value="Bessere Textqualität"> Bessere Textqualität</label>
+          <label class="option"><input type="checkbox" name="success_metrics" value="Schnellere Briefings"> Schnellere Briefings</label>
+          <label class="option"><input type="checkbox" name="success_metrics" value="Weniger Suchaufwand"> Weniger Suchaufwand</label>
+          <label class="option"><input type="checkbox" name="success_metrics" value="Bessere Meeting-Nachbereitung"> Bessere Meeting-Nachbereitung</label>
+          <label class="option"><input type="checkbox" name="success_metrics" value="Nutzerzufriedenheit"> Nutzerzufriedenheit</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Wann wird entschieden, ob skaliert wird?</legend>
+        <div class="option-grid">
+          <label class="option"><input type="radio" name="scale_decision" value="Nach 30 Tagen"> Nach 30 Tagen</label>
+          <label class="option"><input type="radio" name="scale_decision" value="Nach 60 Tagen"> Nach 60 Tagen</label>
+          <label class="option"><input type="radio" name="scale_decision" value="Nach 90 Tagen"> Nach 90 Tagen</label>
+          <label class="option"><input type="radio" name="scale_decision" value="Noch offen"> Noch offen</label>
+        </div>
+      </fieldset>
+    </div>
+  </details>
+
+  <section class="card">
+    <h2>Kurzer Überblick vor dem Absenden</h2>
+    <p class="section-hint">Diese strukturierte Zusammenfassung geht mit an Wolf. Bitte kurz prüfen, dass keine vertraulichen Namen oder Inhalte enthalten sind.</p>
+    <textarea class="summary-box" readonly></textarea>
+    <div class="actions">
+      <button type="button" class="secondary" data-copy-summary>Zusammenfassung kopieren</button>
+      <button type="submit">Angaben an Wolf senden</button>
+    </div>
+  </section>
+</form>
+</main>
+
+<footer>
+  <p>Nach dem Absenden geht eine strukturierte Zusammenfassung an Wolf. Es gibt keinen Download- oder Exportaufwand für die Ausfüllenden.</p>
+</footer>
+<script src="/assets/questionnaire.js"></script>
+</body>
+</html>
