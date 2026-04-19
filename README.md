@@ -81,3 +81,31 @@ Diese Fassung ergänzt:
 
 Hinweis zur Netlify-Robustheit:
 Die sichtbaren Freitextfelder werden clientseitig ergänzt. Damit die Inhalte zuverlässig in der Netlify-Mail landen, werden sie zusätzlich gesammelt in `individual_notes` und `chatgpt_summary` geschrieben.
+
+## v8-Domainumzug
+
+Neue Projektübersicht:
+
+```text
+https://fragebogen.ki-sicherheit.jetzt/
+```
+
+Direktlinks:
+
+```text
+https://fragebogen.ki-sicherheit.jetzt/forms/copilot/
+https://fragebogen.ki-sicherheit.jetzt/forms/postproduktion/
+```
+
+Für den Umzug siehe:
+
+```text
+Domain_Umzug_ki-sicherheit-jetzt.md
+```
+
+Die Formularnamen bleiben unverändert:
+
+```text
+copilot-integration-v1
+postproduktion-ki-v1
+```

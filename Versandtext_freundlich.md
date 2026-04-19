@@ -6,7 +6,7 @@ ich bereite gerade zwei pragmatische KI-Pilotprojekte vor und brauche dafür eur
 
 Bitte öffnet zuerst diese Projektübersicht:
 
-https://fragebogen.hohl.rocks/
+https://fragebogen.ki-sicherheit.jetzt/
 
 Dort findet ihr beide Teilprojekte:
 

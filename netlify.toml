@@ -1,0 +1,18 @@
+# Netlify configuration for the questionnaire site
+# Primary public domain planned for production:
+# https://fragebogen.ki-sicherheit.jetzt
+
+# Optional legacy redirect:
+# This only works if the old domain is still assigned to the same Netlify site
+# and its DNS still points to Netlify.
+[[redirects]]
+  from = "https://fragebogen.hohl.rocks/*"
+  to = "https://fragebogen.ki-sicherheit.jetzt/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://fragebogen.hohl.rocks/*"
+  to = "https://fragebogen.ki-sicherheit.jetzt/:splat"
+  status = 301
+  force = true
